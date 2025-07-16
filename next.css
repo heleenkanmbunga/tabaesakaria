@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body Background and Font */
+  body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #ffe3ec, #e0f7fa, #fce4ec);
+    background-size: 400% 400%;
+    animation: gradientShift 20s ease infinite;
+    color: #333;
+    padding: 2rem;
+    line-height: 1.7;
+    transition: background 1s ease;
+  }
+  
+  /* Gradient  */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Page Title */
+  .page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #444;
+  }
+  
+  /* Audio Player Styling */
+  .audio-player {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .audio-player p {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  audio {
+    width: 300px;
+    max-width: 90%;
+    border-radius: 10px;
+    outline: none;
+  }
+  
+  /* Side-by-Side Layout */
+  .poem-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Individual Poem Styling */
+  .poem {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    max-width: 500px;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  .poem:hover {
+    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.95);
+  }
+  
+  /* Poem Titles */
+  .poem h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #5c5c8a;
+  }
+  
+  /* Responsive Text */
+  @media (max-width: 768px) {
+    .poem-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
